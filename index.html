@@ -20,217 +20,199 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px 0;
+            padding: 20px 0;
             font-family: 'Montserrat', sans-serif;
         }
 
         .mobile-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px; 
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0 15px;
+            padding: 0 10px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-family: 'SolaimanLipi', Arial, sans-serif;
         }
 
         .header h1 {
-            font-size: 26px;
+            font-size: 20px;
             font-weight: bold;
             color: #059669;
             line-height: 1.4;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .header h2 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: normal;
             color: #333333;
-            line-height: 1.5;
         }
 
         .badge {
             display: inline-block;
             background-color: #0ea5e9;
             color: white;
-            padding: 6px 20px;
+            padding: 4px 15px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 700;
-            margin-top: 15px;
+            margin-top: 10px;
             box-shadow: 0 4px 10px rgba(14, 165, 233, 0.4);
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .cards-area {
             display: flex;
-            flex-direction: column;
-            gap: 35px;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 15px; 
             width: 100%;
-            align-items: center;
             margin-bottom: 40px;
         }
 
-        /* 3:4 Premium Card Styling */
+        .card-wrapper {
+            width: calc(50% - 10px); 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card-top-title {
+            font-family: 'SolaimanLipi', sans-serif;
+            font-size: 16px; 
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 10px;
+            text-align: center;
+            min-height: 48px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+            width: 100%;
+            padding: 0 5px;
+        }
+
         .card {
-            width: 280px;
+            width: 100%;
+            max-width: 180px;
             aspect-ratio: 3 / 4;
-            border-radius: 20px;
+            border-radius: 15px;
             position: relative;
             background-color: #1783f2;
             background-size: cover;
             background-position: center;
-            box-shadow: 0 20px 40px rgba(0, 80, 150, 0.25), inset 0 0 0 1px rgba(255,255,255,0.3);
+            box-shadow: 0 10px 20px rgba(0, 80, 150, 0.15), inset 0 0 0 1px rgba(255,255,255,0.3);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             overflow: hidden;
             text-decoration: none;
-            cursor: pointer;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-5px) scale(1.05);
         }
 
         .corner-borders {
             position: absolute;
-            top: 15px; left: 15px; right: 15px; bottom: 15px;
-            border: 2px dashed rgba(255, 255, 255, 0.6);
-            border-radius: 12px;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1.5px dashed rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
             z-index: 5;
         }
-
-        .sparkle {
-            position: absolute;
-            width: 5px; height: 5px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.9);
-            z-index: 5;
-        }
-        .s1 { top: 10%; left: 12%; }
-        .s2 { bottom: 35%; right: 12%; }
-        .s3 { top: 40%; left: 8%; }
 
         .watermark {
             position: absolute;
-            font-size: 100px;
+            font-size: 50px;
             font-weight: 900;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.2);
             z-index: 2;
-            top: 20px; left: -10px;
+            top: 10px; left: -5px;
         }
 
         .card-overlay {
             position: absolute;
             bottom: 0; left: 0; right: 0;
-            height: 70%;
-            background: linear-gradient(to top, rgba(12, 110, 219, 1) 0%, rgba(23, 131, 242, 0.8) 45%, transparent 100%);
+            height: 65%;
+            background: linear-gradient(to top, rgba(12, 110, 219, 1) 0%, rgba(23, 131, 242, 0.7) 50%, transparent 100%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
-            padding-bottom: 35px;
+            padding-bottom: 15px;
             z-index: 10;
         }
 
+        /* 🌟 Perfect Round Icon Box 🌟 */
         .icon-box {
             background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            padding: 16px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.6);
-            margin-bottom: 10px;
+            backdrop-filter: blur(4px);
+            width: 38px; /* Fixed width */
+            height: 38px; /* Fixed height */
+            border-radius: 50%; /* Perfect circle */
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .icon-box svg { width: 30px; height: 30px; stroke: white; }
+        .icon-box svg { width: 18px; height: 18px; stroke: white; }
 
         .card-title {
-            font-size: 28px;
+            font-size: 16px;
             font-weight: 900;
             color: white;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom: 5px;
         }
 
         .click-text {
-            font-size: 12px;
+            font-size: 9px;
             font-weight: 700;
             background: white;
             color: #0c6edb;
-            padding: 8px 24px;
-            border-radius: 20px;
+            padding: 4px 12px;
+            border-radius: 15px;
             text-transform: uppercase;
         }
 
-        /* 🌟 Compact Glassmorphism Button 🌟 */
         .original-site-btn {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             width: auto;
-            min-width: 240px; /* Reduced width */
-            padding: 12px 20px; /* Thinner padding */
+            min-width: 220px;
+            padding: 12px 18px;
             background: linear-gradient(135deg, #059669 0%, #047857 100%);
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 12px; /* Smaller text */
+            font-size: 11px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            /* Glass Stroke Effect */
-            border: 4px solid rgba(255, 255, 255, 0.15); 
+            border: 3px solid rgba(255, 255, 255, 0.15); 
             backdrop-filter: blur(8px);
-            box-shadow: 
-                0 10px 25px rgba(4, 120, 87, 0.3),
-                0 0 0 1px rgba(255, 255, 255, 0.1); 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(4, 120, 87, 0.3);
+            transition: all 0.3s ease;
             overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .original-site-btn::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 50%; height: 100%;
-            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
-            transform: skewX(-25deg);
-            transition: left 0.6s ease;
         }
 
         .original-site-btn:hover {
-            transform: translateY(-3px) scale(1.03);
-            border-color: rgba(255, 255, 255, 0.3); /* Stronger glass stroke on hover */
-            box-shadow: 0 15px 30px rgba(4, 120, 87, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(4, 120, 87, 0.4);
         }
 
-        .original-site-btn:hover::before {
-            left: 150%;
-        }
-
-        .original-site-btn svg {
-            width: 16px;
-            height: 16px;
-            stroke: white;
-            transition: transform 0.3s ease;
-        }
-
-        .original-site-btn:hover svg {
-            transform: translateX(4px);
-        }
+        .original-site-btn svg { width: 14px; height: 14px; stroke: white; }
 
     </style>
 </head>
@@ -239,36 +221,73 @@
     <div class="mobile-container">
         
         <div class="header">
-            <h1>অ্যাওয়ার্ড আবেদন পোর্টালে<br>গ্রুপ রেজিস্ট্রেশন- ডেমো</h1>
-            <h2>ইয়ুথ অ্যাওয়ার্ড ওয়েব পোর্টাল ব্যবস্থাপনা টাস্ক ফোর্স</h2>
+            <h1>ইয়ুথ অ্যাওয়ার্ড ওয়েব পোর্টাল ব্যবস্থাপনা টাস্ক ফোর্স</h1>
+            <h2>বাংলাদেশ স্কাউটস প্রোগ্রাম বিভাগ</h2>
             <div class="badge">Demo</div>
         </div>
 
         <div class="cards-area">
-            <a href="guitar_photos/document.mht" target="_blank" class="card" style="background-image: url('guitar_photos/preview pdf.webp');">
-                <div class="corner-borders"></div>
-                <div class="sparkle s1"></div><div class="sparkle s2"></div><div class="sparkle s3"></div>
-                <div class="watermark">PDF</div>
-                <div class="card-overlay">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            
+            <div class="card-wrapper">
+                <div class="card-top-title">রেজিস্ট্রেশন পদ্ধতি</div>
+                <a href="guitar_photos/reg_process.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_reg.webp');">
+                    <div class="corner-borders"></div>
+                    <div class="watermark">01</div>
+                    <div class="card-overlay">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                        </div>
+                        <div class="card-title">PNG</div>
+                        <div class="click-text">Open</div>
                     </div>
-                    <div class="card-title">PDF</div>
-                    <div class="click-text">Click to View</div>
-                </div>
-            </a>
+                </a>
+            </div>
 
-            <a href="guitar_photos/image.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview png.webp');">
-                <div class="corner-borders"></div>
-                <div class="watermark" style="left: auto; right: -10px;">PNG</div>
-                <div class="card-overlay">
-                    <div class="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            <div class="card-wrapper">
+                <div class="card-top-title">অ্যাওয়ার্ড আবেদন পদ্ধতি</div>
+                <a href="guitar_photos/apply_process.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_apply.webp');">
+                    <div class="corner-borders"></div>
+                    <div class="watermark">02</div>
+                    <div class="card-overlay">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                        </div>
+                        <div class="card-title">PNG</div>
+                        <div class="click-text">Open</div>
                     </div>
-                    <div class="card-title">PNG</div>
-                    <div class="click-text">Click to View</div>
-                </div>
-            </a>
+                </a>
+            </div>
+
+            <div class="card-wrapper">
+                <div class="card-top-title">গ্রুপ রেজিস্ট্রেশন</div>
+                <a href="guitar_photos/group_reg.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_group.webp');">
+                    <div class="corner-borders"></div>
+                    <div class="watermark">03</div>
+                    <div class="card-overlay">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                        </div>
+                        <div class="card-title">PNG</div>
+                        <div class="click-text">Open</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-wrapper">
+                <div class="card-top-title">আসছে....</div>
+                <a href="guitar_photos/others.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_others.webp');">
+                    <div class="corner-borders"></div>
+                    <div class="watermark">04</div>
+                    <div class="card-overlay">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                        </div>
+                        <div class="card-title">PNG</div>
+                        <div class="click-text">Open</div>
+                    </div>
+                </a>
+            </div>
+
         </div>
 
         <a href="https://award.scouts.gov.bd" target="_blank" class="original-site-btn">
