@@ -26,25 +26,22 @@
             position: relative;
         }
 
-        /* 🌟 Premium Shiny Grid Background with Soft Edges - Neutral White/Gray 🌟 */
+        /* 🌟 Premium Shiny Grid Background 🌟 */
         .premium-grid {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            /* Base Grid Lines - Increased opacity here to make it more visible */
             background-image: 
-                linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+                linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
             background-size: 35px 35px;
             z-index: -3;
-            /* Adjusted mask to reveal more of the grid towards the edges */
             -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%);
             mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%);
         }
 
-        /* 🌟 Glowing/Shiny Pulse Effect on Grid 🌟 */
         .premium-grid::after {
             content: '';
             position: absolute;
@@ -52,7 +49,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* Bright highlight lines */
             background-image: 
                 linear-gradient(to right, rgba(255, 255, 255, 0.9) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
@@ -62,13 +58,12 @@
             animation: shine-pulse 4s infinite alternate ease-in-out;
         }
 
-        /* Animation for the shine */
         @keyframes shine-pulse {
             0% { opacity: 0.2; filter: blur(0px); }
             100% { opacity: 1; filter: blur(0.5px) drop-shadow(0 0 5px rgba(200, 200, 200, 0.6)); }
         }
 
-        /* 🌟 Animated Background Blobs - Soft grays 🌟 */
+        /* 🌟 Animated Background Blobs 🌟 */
         .bg-blob-1 {
             position: fixed;
             top: -10%;
@@ -127,17 +122,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0 10px;
+            padding: 0 15px;
             z-index: 1;
-            opacity: 0.6; 
+            opacity: 0.7; 
         }
 
         .shimmer {
             background: #e2e8f0;
-            background-image: linear-gradient(90deg, #e2e8f0 0px, #ffffff 40px, #e2e8f0 80px);
+            background-image: linear-gradient(90deg, #e2e8f0 0px, #f8fafc 40px, #e2e8f0 80px);
             background-size: 600px;
             animation: shimmer-animation 1.2s infinite linear;
-            border-radius: 8px;
         }
 
         @keyframes shimmer-animation {
@@ -158,7 +152,7 @@
 
         .splash-text-container {
             font-family: 'SolaimanLipi', Arial, sans-serif;
-            font-size: 30px;
+            font-size: 30px; 
             font-weight: bold;
             line-height: 1.4;
             display: flex;
@@ -191,17 +185,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0 15px;
+            padding: 0 15px 20px 15px;
             z-index: 10;
         }
 
-        /* 🌟 Compact Premium Glass Header 🌟 */
+        /* 🌟 Header Box 🌟 */
         .header-glass-box {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(25px);
             border: 1px solid rgba(226, 232, 240, 0.9);
             border-radius: 16px; 
-            padding: 15px 15px; 
+            padding: 18px 15px; 
             text-align: center;
             margin-bottom: 25px; 
             width: 100%;
@@ -210,17 +204,16 @@
 
         .header-glass-box h1 {
             font-family: 'SolaimanLipi', Arial, sans-serif;
-            font-size: 17px; 
+            font-size: 22px; 
             font-weight: bold;
             color: #047857;
-            line-height: 1.3;
-            margin-bottom: 4px;
-            text-shadow: 0 2px 4px rgba(4, 120, 87, 0.1);
+            line-height: 1.35;
+            margin-bottom: 6px;
         }
 
         .header-glass-box h2 {
             font-family: 'SolaimanLipi', Arial, sans-serif;
-            font-size: 12px; 
+            font-size: 13px; 
             font-weight: normal;
             color: #475569;
         }
@@ -233,139 +226,157 @@
             border-radius: 20px;
             font-size: 9px;
             font-weight: 800;
-            margin-top: 8px;
-            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+            margin-top: 10px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        /* 🌟 Cards Grid 🌟 */
-        .cards-area {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            gap: 15px; 
-            width: 100%;
-            margin-bottom: 45px;
-        }
-
-        .card-wrapper {
-            width: calc(50% - 10px); 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .card-top-title {
-            font-family: 'SolaimanLipi', sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            color: #1e293b;
-            margin-bottom: 12px;
+        /* 🌟 Section Title 🌟 */
+        .section-title {
             text-align: center;
-            min-height: 45px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1.3;
+            margin-bottom: 20px;
             width: 100%;
-            padding: 0 5px;
+            padding: 0 10px;
         }
 
-        .card {
+        .section-title h2 {
+            font-family: 'SolaimanLipi', sans-serif;
+            font-size: 20px;
+            color: #052e2b;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .section-title p {
+            font-family: 'SolaimanLipi', sans-serif;
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        /* 🌟 Plain White Cards Grid 🌟 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
             width: 100%;
-            max-width: 180px;
-            aspect-ratio: 3 / 4;
+            margin-bottom: 40px;
+        }
+
+        .portal-card {
+            background: #ffffff;
             border-radius: 20px;
-            position: relative;
-            background-color: #059669;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 12px 25px rgba(5, 150, 105, 0.2), inset 0 0 0 1px rgba(255,255,255,0.4);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            overflow: hidden;
             text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.3), inset 0 0 0 2px rgba(255,255,255,0.5);
-        }
-
-        .corner-borders {
-            position: absolute;
-            top: 10px; left: 10px; right: 10px; bottom: 10px;
-            border: 1.5px dashed rgba(255, 255, 255, 0.5);
-            border-radius: 12px;
-            z-index: 5;
-        }
-
-        .watermark {
-            position: absolute;
-            font-size: 55px;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.15);
-            z-index: 2;
-            top: 10px; left: -5px;
-        }
-
-        .card-overlay {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 70%;
-            background: linear-gradient(to top, rgba(4, 120, 87, 0.95) 0%, rgba(5, 150, 105, 0.6) 60%, transparent 100%);
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            padding-bottom: 20px;
-            z-index: 10;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(.22,1,.36,1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.03);
+            position: relative;
         }
 
-        .icon-box {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(6px);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1.5px solid rgba(255, 255, 255, 0.6);
-            margin-bottom: 10px;
+        .portal-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(5, 150, 105, 0.12), 0 0 0 1px rgba(5, 150, 105, 0.1);
+        }
+
+        /* 🌟 Top Image Area 🌟 */
+        .card-image-wrap {
+            width: 100%;
+            height: 160px; 
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            background: #f8fafc;
+        }
+
+        .card-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.6s ease;
+        }
+
+        .portal-card:hover .card-image-wrap img {
+            transform: scale(1.08);
+        }
+
+        /* 🌟 Bottom Text Area 🌟 */
+        .card-content {
+            padding: 14px; 
             display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            flex-grow: 1; 
         }
 
-        .icon-box svg { width: 20px; height: 20px; stroke: white; }
-
-        .guideline-badge {
-            font-size: 8px; 
-            font-weight: 900;
-            color: #047857; 
-            background: rgba(255, 255, 255, 0.75); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid rgba(255, 255, 255, 1); 
-            padding: 3px 10px; 
-            border-radius: 50px; 
-            margin-bottom: 6px; 
-            letter-spacing: 0.5px; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-            text-transform: uppercase;
-        }
-
-        .click-text {
-            font-size: 10px;
+        .card-pill {
+            background: #ecfdf5; 
+            color: #047857;
+            font-size: 8px;
             font-weight: 800;
-            background: white;
-            color: #059669;
-            padding: 5px 16px;
-            border-radius: 20px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-bottom: 8px; 
             text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
+        }
+
+        .card-title {
+            font-family: 'SolaimanLipi', sans-serif;
+            font-size: 15px; 
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 6px; 
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-family: 'SolaimanLipi', sans-serif;
+            font-size: 10px;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 15px; 
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* 🌟 Open Button / Box Shape 🌟 */
+        .card-btn {
+            font-family: 'SolaimanLipi', sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            color: #047857;
+            background: #f1f5f9; 
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%; 
+            padding: 8px 0;
+            border-radius: 10px; 
+            margin-top: auto; 
+            transition: all 0.3s ease;
+        }
+
+        .card-btn span {
+            margin-left: 6px;
+            transition: transform 0.3s ease;
+            font-size: 12px;
+        }
+
+        .portal-card:hover .card-btn {
+            background: #059669;
+            color: #ffffff;
+            border-color: #059669;
+            box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);
+        }
+
+        .portal-card:hover .card-btn span {
+            transform: translateX(4px);
         }
 
         /* 🌟 Floating Glass Button 🌟 */
@@ -427,44 +438,133 @@
             font-weight: bold;
         }
 
+        /* 🌟 Compact & Small Footer Links 🌟 */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 14px; /* Reduced gap */
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9.5px; /* Smaller Text */
+            font-weight: 600;
+            color: #64748b; 
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #047857; 
+        }
+
+        /* Compact Round Icon Wrapper */
+        .footer-links .icon-circle {
+            width: 24px; /* Reduced from 32px */
+            height: 24px; /* Reduced from 32px */
+            border-radius: 50%;
+            background: rgba(241, 245, 249, 0.7);
+            border: 1px solid rgba(226, 232, 240, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #64748b;
+            transition: all 0.2s ease;
+        }
+
+        .footer-links a:hover .icon-circle {
+            background: rgba(5, 150, 105, 0.06);
+            border-color: rgba(5, 150, 105, 0.25);
+            color: #047857;
+            transform: scale(1.05);
+        </div>
+
+        .footer-links svg {
+            width: 12px; /* Smaller Icons */
+            height: 12px; /* Smaller Icons */
+            stroke: currentColor;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Premium Grid & Blobs (Neutralized & Made More Visible) -->
+    <!-- Premium Grid & Blobs -->
     <div class="premium-grid"></div>
     <div class="bg-blob-1"></div>
     <div class="bg-blob-2"></div>
 
+    <!-- Splash Screen Skeleton -->
     <div id="splash-screen">
         <div class="skeleton-bg-layout">
-            <div style="width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 25px;">
-                <div class="shimmer" style="width: 85%; height: 20px; border-radius: 6px; margin-bottom: 6px;"></div>
-                <div class="shimmer" style="width: 60%; height: 20px; border-radius: 6px; margin-bottom: 12px;"></div>
-                <div class="shimmer" style="width: 70%; height: 14px; border-radius: 6px; margin-bottom: 12px;"></div>
+            
+            <div style="width: 100%; background: rgba(255, 255, 255, 0.85); border-radius: 16px; padding: 18px 15px; margin-bottom: 25px; display: flex; flex-direction: column; align-items: center; border: 1px solid rgba(226, 232, 240, 0.9);">
+                <div class="shimmer" style="width: 95%; height: 20px; border-radius: 6px; margin-bottom: 8px;"></div>
+                <div class="shimmer" style="width: 60%; height: 14px; border-radius: 6px; margin-bottom: 14px;"></div>
                 <div class="shimmer" style="width: 55px; height: 18px; border-radius: 20px;"></div>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; width: 100%; margin-bottom: 40px;">
-                <div style="width: calc(50% - 10px); display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
-                    <div class="shimmer" style="width: 80%; height: 16px; border-radius: 6px; margin-bottom: 20px;"></div>
-                    <div class="shimmer" style="width: 100%; max-width: 180px; aspect-ratio: 3 / 4; border-radius: 20px;"></div>
-                </div>
-                <div style="width: calc(50% - 10px); display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
-                    <div class="shimmer" style="width: 80%; height: 16px; border-radius: 6px; margin-bottom: 20px;"></div>
-                    <div class="shimmer" style="width: 100%; max-width: 180px; aspect-ratio: 3 / 4; border-radius: 20px;"></div>
-                </div>
-                <div style="width: calc(50% - 10px); display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
-                    <div class="shimmer" style="width: 80%; height: 16px; border-radius: 6px; margin-bottom: 20px;"></div>
-                    <div class="shimmer" style="width: 100%; max-width: 180px; aspect-ratio: 3 / 4; border-radius: 20px;"></div>
-                </div>
-                <div style="width: calc(50% - 10px); display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
-                    <div class="shimmer" style="width: 80%; height: 16px; border-radius: 6px; margin-bottom: 20px;"></div>
-                    <div class="shimmer" style="width: 100%; max-width: 180px; aspect-ratio: 3 / 4; border-radius: 20px;"></div>
-                </div>
+            <div style="width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
+                <div class="shimmer" style="width: 50%; height: 20px; border-radius: 6px; margin-bottom: 8px;"></div>
+                <div class="shimmer" style="width: 75%; height: 12px; border-radius: 6px;"></div>
             </div>
 
-            <div class="shimmer" style="width: 250px; height: 45px; border-radius: 50px;"></div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 15px; width: 100%; margin-bottom: 40px;">
+                
+                <div style="width: calc(50% - 7.5px); background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column;">
+                    <div class="shimmer" style="width: 100%; height: 160px;"></div> 
+                    <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+                        <div class="shimmer" style="width: 40%; height: 12px; border-radius: 4px; margin-bottom: 10px;"></div> 
+                        <div class="shimmer" style="width: 80%; height: 16px; border-radius: 4px; margin-bottom: 8px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 8px; border-radius: 4px; margin-bottom: 6px;"></div> 
+                        <div class="shimmer" style="width: 65%; height: 8px; border-radius: 4px; margin-bottom: 15px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 28px; border-radius: 10px; margin-top: auto;"></div> 
+                    </div>
+                </div>
+
+                <div style="width: calc(50% - 7.5px); background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column;">
+                    <div class="shimmer" style="width: 100%; height: 160px;"></div> 
+                    <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+                        <div class="shimmer" style="width: 50%; height: 12px; border-radius: 4px; margin-bottom: 10px;"></div> 
+                        <div class="shimmer" style="width: 85%; height: 16px; border-radius: 4px; margin-bottom: 8px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 8px; border-radius: 4px; margin-bottom: 6px;"></div> 
+                        <div class="shimmer" style="width: 75%; height: 8px; border-radius: 4px; margin-bottom: 15px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 28px; border-radius: 10px; margin-top: auto;"></div> 
+                    </div>
+                </div>
+
+                <div style="width: calc(50% - 7.5px); background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column;">
+                    <div class="shimmer" style="width: 100%; height: 160px;"></div> 
+                    <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+                        <div class="shimmer" style="width: 45%; height: 12px; border-radius: 4px; margin-bottom: 10px;"></div> 
+                        <div class="shimmer" style="width: 75%; height: 16px; border-radius: 4px; margin-bottom: 8px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 8px; border-radius: 4px; margin-bottom: 6px;"></div> 
+                        <div class="shimmer" style="width: 80%; height: 8px; border-radius: 4px; margin-bottom: 15px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 28px; border-radius: 10px; margin-top: auto;"></div> 
+                    </div>
+                </div>
+
+                <div style="width: calc(50% - 7.5px); background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column;">
+                    <div class="shimmer" style="width: 100%; height: 160px;"></div> 
+                    <div style="padding: 14px; display: flex; flex-direction: column; flex-grow: 1;">
+                        <div class="shimmer" style="width: 55%; height: 12px; border-radius: 4px; margin-bottom: 10px;"></div> 
+                        <div class="shimmer" style="width: 90%; height: 16px; border-radius: 4px; margin-bottom: 8px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 8px; border-radius: 4px; margin-bottom: 6px;"></div> 
+                        <div class="shimmer" style="width: 60%; height: 8px; border-radius: 4px; margin-bottom: 15px;"></div> 
+                        <div class="shimmer" style="width: 100%; height: 28px; border-radius: 10px; margin-top: auto;"></div> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="shimmer" style="width: 240px; height: 45px; border-radius: 50px;"></div>
+
         </div>
 
         <div class="splash-text-wrapper">
@@ -474,6 +574,7 @@
         </div>
     </div>
 
+    <!-- Main Content -->
     <div class="mobile-container">
         
         <div class="header-glass-box">
@@ -482,66 +583,63 @@
             <div class="badge">Demo</div>
         </div>
 
-        <div class="cards-area">
-            <div class="card-wrapper">
-                <div class="card-top-title">রেজিস্ট্রেশন পদ্ধতি</div>
-                <a href="guitar_photos/reg_process.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_reg.webp');">
-                    <div class="corner-borders"></div>
-                    <div class="watermark">01</div>
-                    <div class="card-overlay">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                        </div>
-                        <div class="guideline-badge">GUIDELINE</div>
-                        <div class="click-text">Open</div>
-                    </div>
-                </a>
-            </div>
+        <!-- Section Title -->
+        <div class="section-title">
+            <h2>গাইডলাইন ও রিসোর্সসমূহ</h2>
+            <p>নিচের নির্দেশনা গুলো দেখুন</p>
+        </div>
 
-            <div class="card-wrapper">
-                <div class="card-top-title">আবেদন পদ্ধতি</div>
-                <a href="guitar_photos/apply_process.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_apply.webp');">
-                    <div class="corner-borders"></div>
-                    <div class="watermark">02</div>
-                    <div class="card-overlay">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                        </div>
-                        <div class="guideline-badge">GUIDELINE</div>
-                        <div class="click-text">Open</div>
-                    </div>
-                </a>
-            </div>
+        <!-- Cards Grid -->
+        <div class="card-grid">
 
-            <div class="card-wrapper">
-                <div class="card-top-title">গ্রুপ রেজিস্ট্রেশন</div>
-                <a href="guitar_photos/group_reg.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_group.webp');">
-                    <div class="corner-borders"></div>
-                    <div class="watermark">03</div>
-                    <div class="card-overlay">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                        </div>
-                        <div class="guideline-badge">GUIDELINE</div>
-                        <div class="click-text">Open</div>
-                    </div>
-                </a>
-            </div>
+            <a href="guitar_photos/reg_process.png" target="_blank" class="portal-card">
+                <div class="card-image-wrap">
+                    <img src="guitar_photos/preview_reg.webp" alt="Registration">
+                </div>
+                <div class="card-content">
+                    <div class="card-pill">GUIDELINE</div>
+                    <div class="card-title">রেজিস্ট্রেশন পদ্ধতি</div>
+                    <div class="card-desc">নতুন ব্যবহারকারীদের জন্য সম্পূর্ণ রেজিস্ট্রেশন প্রসেস।</div>
+                    <div class="card-btn">ওপেন করুন <span>&rarr;</span></div>
+                </div>
+            </a>
 
-            <div class="card-wrapper">
-                <div class="card-top-title">আসছে...</div>
-                <a href="guitar_photos/others.png" target="_blank" class="card" style="background-image: url('guitar_photos/preview_others.webp');">
-                    <div class="corner-borders"></div>
-                    <div class="watermark">04</div>
-                    <div class="card-overlay">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                        </div>
-                        <div class="guideline-badge">GUIDELINE</div>
-                        <div class="click-text">Open</div>
-                    </div>
-                </a>
-            </div>
+            <a href="guitar_photos/apply_process.png" target="_blank" class="portal-card">
+                <div class="card-image-wrap">
+                    <img src="guitar_photos/preview_apply.webp" alt="Apply">
+                </div>
+                <div class="card-content">
+                    <div class="card-pill">GUIDELINE</div>
+                    <div class="card-title">আবেদন পদ্ধতি</div>
+                    <div class="card-desc">অ্যাওয়ার্ড আবেদন জমা দেওয়ার প্রসেস</div>
+                    <div class="card-btn">ওপেন করুন <span>&rarr;</span></div>
+                </div>
+            </a>
+
+            <a href="guitar_photos/group_reg.png" target="_blank" class="portal-card">
+                <div class="card-image-wrap">
+                    <img src="guitar_photos/preview_group.webp" alt="Group">
+                </div>
+                <div class="card-content">
+                    <div class="card-pill">GUIDELINE</div>
+                    <div class="card-title">গ্রুপ রেজিস্ট্রেশন</div>
+                    <div class="card-desc">গ্রুপভিত্তিক রেজিস্ট্রেশন প্রক্রিয়া।</div>
+                    <div class="card-btn">ওপেন করুন <span>&rarr;</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="portal-card">
+                <div class="card-image-wrap">
+                    <img src="guitar_photos/preview_others.webp" alt="Upcoming">
+                </div>
+                <div class="card-content">
+                    <div class="card-pill">COMING SOON</div>
+                    <div class="card-title">আসছে...</div>
+                    <div class="card-desc">আসছে...</div>
+                    <div class="card-btn">শীঘ্রই আসছে <span>&rarr;</span></div>
+                </div>
+            </a>
+
         </div>
 
         <a href="https://award.scouts.gov.bd" target="_blank" class="original-site-btn">
@@ -552,9 +650,55 @@
             </svg>
         </a>
 
-        <!-- 🌟 Added Copyright Section 🌟 -->
         <div class="copyright-area">
             &copy; 2026 <span>Youth Award Web Portal Management Task Force</span>। Bangladesh Scouts।
+        </div>
+
+        <!-- 🌟 Subtle & Compact Footer Links 🌟 -->
+        <div class="footer-links">
+            
+            <a href="https://service.scouts.gov.bd/" target="_blank">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                BS ID Login
+            </a>
+
+            <a href="https://scouts.gov.bd/" target="_blank">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                </div>
+                Website
+            </a>
+
+            <a href="https://www.facebook.com/bangladeshscouts.NHQ" target="_blank">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </div>
+                Page
+            </a>
+            
+            <a href="https://facebook.com/groups/bangladeshscouts.nhq/" target="_blank">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                Group
+            </a>
+            
         </div>
 
     </div>
